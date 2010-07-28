@@ -1,0 +1,35 @@
+#
+# Howto use:
+#
+require "tv"
+
+#
+# Find TV Show
+#
+series = Series.new
+res = series.find "Dexter"
+res.each do |s|
+  puts "#{s[:id]} - #{s[:name]}"
+end
+
+#
+# Get Data
+#
+serie = Serie.new 79349 # TheTvDB ID
+
+puts serie.name
+puts serie.first_aired.to_s
+
+serie.seasons.each do |s|
+  puts "Season: #{s.number}"
+  s.each do |e|
+    puts "  Episode: #{e.number} - #{e.name}"
+  end
+end
+
+#
+# Get Banners
+#
+serie.banners.each do |b|
+  puts b.path
+end
