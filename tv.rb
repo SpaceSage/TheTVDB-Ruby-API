@@ -8,7 +8,7 @@ require 'find'
 require 'forwardable'
 include REXML
 
-API_KEY = 'B89CE93890E9419B'
+API_KEY = 'xxx'
 
 class Series
   
